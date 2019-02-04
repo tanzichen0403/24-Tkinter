@@ -75,11 +75,12 @@ def main():
     #      n = int(s)
     ####################################################################
     input2=ttk.Entry(frame1)
-    x = input2.get()
-    n = int(str(x))
+
+
     input2.grid()
     printi2=ttk.Button(frame1,text="print n times")
-    printi2['command']=(lambda :print_n(n,input1.get()))
+    printi2['command']=(lambda :print_n(int(input2.get()),input1.get()))
+    printi2.grid()
 
     # -------------------------------------------------------------------------
     # Done: 8. As time permits, do other interesting GUI things!
